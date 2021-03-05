@@ -1,0 +1,24 @@
+Package: splash
+Title: Splashing a User Interface onto H2o MOJO Files
+Version: 0.1.0
+Authors@R: 
+    c(person(given = 'Jake',
+             family = 'Huang',
+             role = c('aut', 'cre'),
+             email = 'yiju@umich.edu'),
+      person(given = 'Karandeep',
+             family = 'Singh',
+             role = c('aut', 'cre'),
+             email = 'kdpsingh@umich.edu'))
+Description: This package turns h2o.ai Model-Optimized Java Object (MOJO) zip files into interactive documents.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports: 
+    ini,
+    tools,
+    h2o,
+    rappdirs,
+    rmarkdown
