@@ -1,5 +1,5 @@
 Package: splash
-Title: Splashing a User Interface onto H2o MOJO Files
+Title: Splashing a User Interface onto H2O MOJO Files
 Version: 0.1.0
 Authors@R: 
     c(person(given = 'Jake',

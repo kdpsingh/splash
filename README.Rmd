@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# splash: Splashing a User Interface onto H2o MOJO Files
+# splash: Splashing a User Interface onto h2o MOJO Files
 
 <!-- badges: start -->
 <!-- badges: end -->
