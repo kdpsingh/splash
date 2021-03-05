@@ -22,3 +22,5 @@ Imports:
     h2o,
     rappdirs,
     rmarkdown
+URL: https://github.com/ML4LHS/splash
+BugReports: https://github.com/ML4LHS/splash/issues
