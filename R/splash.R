@@ -4,6 +4,9 @@
 #' builds an interactive document (`.Rmd` file), provides an `h2o-genmodel.jar`
 #' file, and launches the interactive document using `rmarkdown::render()`.
 #'
+#' If you set `rmd_run` to `TRUE`, note that this will change your working
+#' directory.
+#'
 #' @param mojo_file_path The file path to the h2o model-optimized Java object
 #'   (MOJO) zip file.
 #' @param output_file The name of the Rmd file to create.
@@ -279,7 +282,7 @@ splash = function(mojo_file_path,
   \t# call mojo
   \tpred_rf <- h2o::h2o.mojo_predict_df(frame=x,
   \t                               mojo_zip_path=", shQuote(mojo_file_name), ",
-  \t                               genmodel_jar_path='h2o-genmodel.jar',
+  \t                               genmodel_jar_path = 'h2o-genmodel.jar',
   \t                               verbose = F)
   \tpred_rf")
 
@@ -320,7 +323,10 @@ splash = function(mojo_file_path,
 
   # Run rmd file if rmd_run is set to TRUE
   if (rmd_run) {
+    working_directory = getwd()
+    setwd(output_path)
     rmarkdown::run(file.path(output_path, output_file))
+    setwd(working_directory)
   }
 }
 

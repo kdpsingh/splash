@@ -7,17 +7,42 @@
 splash(
   mojo_file_path,
   output_file = "index.Rmd",
-  overwrite = TRUE,
-  title = NULL,
-  author = NULL,
-  date = NULL,
+  overwrite = FALSE,
+  title = "",
+  author = "",
+  date = "",
   rmd_output = "html_document",
-  runtime = "shiny"
+  runtime = "shiny",
+  rmd_run = TRUE
 )
 }
 \arguments{
-\item{runtime}{}
+\item{mojo_file_path}{The file path to the h2o model-optimized Java object
+(MOJO) zip file.}
+
+\item{output_file}{The name of the Rmd file to create.}
+
+\item{overwrite}{Whether to overwrite the output_file. Defaults to \code{FALSE}.}
+
+\item{title}{The YAML header `title`` for the Rmd output file.}
+
+\item{author}{The YAML header `author`` for the Rmd output file.}
+
+\item{date}{The YAML header `date`` for the Rmd output file.}
+
+\item{rmd_output}{The YAML header `output`` for the of Rmd output file.}
+
+\item{runtime}{The YAML runtime. Currently, only \code{shiny} is supported.}
+
+\item{rmd_run}{Whether to run the Rmd output file after creating it. Defaults
+to \code{TRUE}.}
 }
 \description{
-Splash
+When supplied with the path to an \code{h2o} mojo (\code{.zip}) file, this function
+builds an interactive document (\code{.Rmd} file), provides an \code{h2o-genmodel.jar}
+file, and launches the interactive document using \code{rmarkdown::render()}.
+}
+\details{
+If you set \code{rmd_run} to \code{TRUE}, note that this will change your working
+directory.
 }

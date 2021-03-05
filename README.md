@@ -1,24 +1,16 @@
----
-output: github_document
----
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
-)
-```
 
 # splash: Splashing a User Interface onto H2o MOJO Files
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
-When supplied with the path to an `h2o` mojo (`.zip`) file, `splash` builds an interactive document (`.Rmd` file), provides an `h2o-genmodel.jar` file, and launches the interactive document using `rmarkdown::render()`.
+When supplied with the path to an `h2o` mojo (`.zip`) file, `splash`
+builds an interactive document (`.Rmd` file), provides an
+`h2o-genmodel.jar` file, and launches the interactive document using
+`rmarkdown::render()`.
 
 ## Installation
 
@@ -30,7 +22,7 @@ remotes::install_github('ML4LHS/splash')
 
 ## Here is how it works
 
-```{r eval=FALSE}
+``` r
 library(splash)
 
 temp_dir = file.path(tempdir(), 'splash_test')
