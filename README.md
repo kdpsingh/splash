@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# splash: Splashing a User Interface onto H2o MOJO Files
+# splash: Splashing a User Interface onto h2o MOJO Files
 
 <!-- badges: start -->
 
